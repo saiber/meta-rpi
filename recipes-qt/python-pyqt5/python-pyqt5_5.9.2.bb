@@ -11,7 +11,7 @@ SRC_URI[sha256sum] = "c190dac598c97b0113ca5e7a37c71c623f02d1d713088addfacac4acfa
 
 S = "${WORKDIR}/PyQt5_gpl-${PV}"
 
-DEPENDS = "python qtbase qtdeclarative qtmultimedia qtserialport sip sip-native"
+DEPENDS = "python qtbase qtmultimedia qtserialport sip sip-native"
 
 inherit qmake5 pythonnative python-dir
 
