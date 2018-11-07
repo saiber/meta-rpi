@@ -8,6 +8,9 @@ SRC_URI = "file://rndaddtoentcnt.c \
            file://Makefile \
           "
 
+# Skip make clean step.
+CLEANBROKEN = "1"
+
 S = "${WORKDIR}"
 
 TARGET_CC_ARCH += "${LDFLAGS}"
