@@ -20,6 +20,7 @@ SM_PKGS = " \
 "
 
 IMAGE_INSTALL += " \
+    lsb \
     connman \
     ${SM_PKGS} \
     ${MQTT} \
