@@ -17,10 +17,10 @@ SM_PKGS = " \
     mbedtls \
     redis \
     hiredis \
-    mosquitto \
 "
 
 IMAGE_INSTALL += " \
+    connman \
     ${SM_PKGS} \
     ${MQTT} \
 "
