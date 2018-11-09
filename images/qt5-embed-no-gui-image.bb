@@ -34,15 +34,12 @@ QT5_PKGS = " \
     qtsvg \
     qtwebsockets-qmlplugins \
     qtxmlpatterns \
-"
-
-QML_APPS = " \
-    qqtest \
+    qtknx \
+    qtmqtt \
 "
 
 IMAGE_INSTALL += " \
     ${QT5_PKGS} \
-    ${QML_APPS} \
 "
 
 export IMAGE_BASENAME = "qt5-embed-no-gui-image"
