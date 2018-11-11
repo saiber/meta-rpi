@@ -16,10 +16,10 @@ LICENSE_FLAGS_WHITELIST = "commercial"
 # distro feature: ext2 opengl usbhost ${DISTRO_FEATURES_LIBC}
 DISTRO_FEATURES = "ext2 usbhost ${DISTRO_FEATURES_LIBC}"
 
-DISTRO_FEATURES_BACKFILL_CONSIDERED += "pulseaudio"
+# DISTRO_FEATURES_BACKFILL_CONSIDERED += "pulseaudio"
 
-PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
-PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
+# PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
+# PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 
 PREFERRED_PROVIDER_udev = "eudev"
 
@@ -36,9 +36,7 @@ MACHINE_FEATURES_remove = "apm"
 INHERIT += "extrausers"
 USER = "pi"
 PASSWORD = "raspberry"
-RPASSWORD = "root"
 EXTRA_USERS_PARAMS = " \
-              usermod -P {RPASSWORD} root; \
               userdel nobody; \
               useradd muser; \
               usermod -P ${PASSWORD} ${USER}; \
@@ -181,7 +179,7 @@ PACKAGE_CLASSES ?= "package_rpm"
 # There are other application targets that can be used here too, see
 # meta/classes/image.bbclass and meta/classes/core-image.bbclass for more details.
 # We default to enabling the debugging tweaks.
-EXTRA_IMAGE_FEATURES ?= "package-management"
+# EXTRA_IMAGE_FEATURES ?= "package-management"
 
 #
 # Additional image features
