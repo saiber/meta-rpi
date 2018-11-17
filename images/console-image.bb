@@ -47,6 +47,7 @@ DEV_SDK_INSTALL = " \
     make \
     pkgconfig \
     python3-modules \
+    rsync \
 "
 
 DEV_EXTRAS = " \

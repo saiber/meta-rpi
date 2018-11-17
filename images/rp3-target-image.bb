@@ -4,6 +4,8 @@ LICENSE = "MIT"
 
 require qt5-embed-no-gui-image.bb
 
+IMAGE_FEATURES += "dev-pkgs"
+
 MQTT = " \
     libmosquitto1 \
     libmosquittopp1 \
@@ -14,6 +16,7 @@ MQTT = " \
 "
 
 SM_PKGS = " \
+    openssl \
     mbedtls \
     redis \
     hiredis \
