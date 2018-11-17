@@ -38,7 +38,7 @@ USER = "pi"
 PASSWORD = "raspberry"
 EXTRA_USERS_PARAMS = " \
               userdel nobody; \
-              useradd muser; \
+              useradd ${USER}; \
               usermod -P ${PASSWORD} ${USER}; \
               usermod -a -G sudo ${USER}; \
               usermod -a -G adm ${USER}; \
