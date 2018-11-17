@@ -20,6 +20,7 @@ SM_PKGS = " \
     mbedtls \
     redis \
     hiredis \
+    rapidjson \
 "
 
 IMAGE_INSTALL += " \
@@ -34,4 +35,4 @@ update_sudoers(){
 }
 ROOTFS_POSTPROCESS_COMMAND += "update_sudoers;"
 
-export IMAGE_BASENAME = "rp3-target-image"
+export IMAGE_BASENAME = "rp3-target-image-dev"
