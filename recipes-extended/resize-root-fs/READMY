@@ -1,0 +1,19 @@
+Edit "fstab" file in meta/recipes-core/base-files/base-files/
+
+The final "fstab":
+
+ proc            /proc           proc    defaults          0       0
+ /dev/mmcblk0p1  /boot           vfat    defaults          0       2
+ /dev/mmcblk0p2  /               ext4    defaults,noatime  0       1
+ # a swapfile is not a swap partition, no line here
+ #   use  dphys-swapfile swap[on|off]  for that
+
+
+Edit local.conf file and add required recipes to image:
+
+# Resize ROOT FS at first boot
+IMAGE_INSTALL_append = " parted"
+IMAGE_INSTALL_append = " e2fsprogs-resize2fs"
+IMAGE_INSTALL_append = " resize-root-fs"
+
+

@@ -14,7 +14,7 @@
 LICENSE_FLAGS_WHITELIST = "commercial"
 
 # distro feature: ext2 opengl usbhost ${DISTRO_FEATURES_LIBC}
-DISTRO_FEATURES = "ext2 usbhost ${DISTRO_FEATURES_LIBC}"
+DISTRO_FEATURES = "ext4 usbhost ${DISTRO_FEATURES_LIBC}"
 
 # DISTRO_FEATURES_BACKFILL_CONSIDERED += "pulseaudio"
 
@@ -31,6 +31,14 @@ VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 
 MACHINE_FEATURES_remove = "apm"
+
+# for a root passwd, change below to your password
+IMAGE_INSTALL_append = " sudo"
+
+# Resize ROOT FS at first boot
+IMAGE_INSTALL_append = " parted"
+IMAGE_INSTALL_append = " e2fsprogs-resize2fs"
+IMAGE_INSTALL_append = " resize-root-fs"
 
 # Add custom user
 INHERIT += "extrausers"
